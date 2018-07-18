@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation.xml"
+            app:startDestination="@id/argFragment">
+
+    <fragment
+        android:id="@+id/argFragment"
+        android:name="hu.am2.navigationactionbug.ArgFragment"
+        android:label="fragment_arg"
+        tools:layout="@layout/fragment_arg">
+        <action android:id="@+id/action_one" app:destination="@id/argFragment">
+            <argument android:name="type"  android:defaultValue="1"/>
+        </action>
+        <action android:id="@+id/action_two" app:destination="@id/argFragment">
+        </action>
+    </fragment>
+    <action android:id="@+id/global_action" app:destination="@id/argFragment">
+        <argument android:name="type"  android:defaultValue="3"/>
+    </action>
+</navigation>
