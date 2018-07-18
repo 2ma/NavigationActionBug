@@ -14,10 +14,10 @@
             <argument android:name="type"  android:defaultValue="1"/>
         </action>
         <action android:id="@+id/action_two" app:destination="@id/argFragment">
-            <argument android:name="type" app:type="integer"/>
+            <argument android:name="type" app:type="integer" android:defaultValue="2"/>
         </action>
     </fragment>
-    <action android:id="@+id/global_action" app:destination="@id/argFragment">
+    <action android:id="@+id/action_three" app:destination="@id/argFragment">
         <argument android:name="type"  android:defaultValue="3"/>
     </action>
 </navigation>
